@@ -1,80 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-        content="Nsovo Nkuna - Computer Science graduate and software developer portfolio.">
+    <meta
+        name="description"
+        content="Nsovo Nkuna - Computer Science and Mathematics graduate, software developer and web developer."
+    >
 
     <title>Nsovo Nkuna | Software Developer</title>
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome for general UI icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Animated background -->
-
-    <div class="background-effect"></div>
-
-
     <!-- =========================
-         NAVIGATION
+         HEADER
     ========================== -->
 
-    <header>
+    <header class="header">
 
-        <nav class="navbar">
+        <div class="container nav-container">
 
             <a href="#home" class="logo">
-                <span></span>
+                <span>&lt;</span>Nsovo<span>/&gt;</span>
             </a>
 
+            <nav class="nav" id="nav">
 
-            <button id="menu-button" class="menu-button">
-                ☰
-            </button>
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#contact" class="nav-link">Contact</a>
 
+            </nav>
 
-            <ul id="nav-links" class="nav-links">
+            <div class="header-actions">
 
-                <li>
-                    <a href="#home" class="nav-link active">Home</a>
-                </li>
+                <button
+                    id="theme-toggle"
+                    class="theme-button"
+                    aria-label="Toggle theme"
+                >
+                    <i class="fa-solid fa-moon"></i>
+                </button>
 
-                <li>
-                    <a href="#about" class="nav-link">About</a>
-                </li>
+                <button
+                    id="menu-button"
+                    class="menu-button"
+                    aria-label="Open navigation"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
 
-                <li>
-                    <a href="#projects" class="nav-link">Projects</a>
-                </li>
+            </div>
 
-                <li>
-                    <a href="#skills" class="nav-link">Skills</a>
-                </li>
-
-                <li>
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
-
-            </ul>
-
-
-            <button id="theme-button" class="theme-button">
-                ☀
-            </button>
-
-        </nav>
+        </div>
 
     </header>
 
 
-    <main>
+    <!-- =========================
+         MAIN
+    ========================== -->
 
+    <main>
 
         <!-- =========================
              HERO
@@ -82,61 +88,76 @@
 
         <section id="home" class="hero">
 
-            <div class="hero-content">
+            <div class="hero-glow glow-one"></div>
+            <div class="hero-glow glow-two"></div>
 
-                <div class="hero-text">
+            <div class="container hero-container">
 
-                    <p class="greeting">
-                        👋 Hello, I'm
+                <div class="hero-content">
+
+                    <p class="hero-small-title">
+                        HELLO, I'M
                     </p>
 
                     <h1>
-                        Nsovo Nkuna
+                        Nsovo <span>Nkuna</span>
                     </h1>
 
                     <h2>
                         I'm a
-                        <span id="typing-text"></span>
+                        <span id="typing-text">Software Developer</span>
                     </h2>
 
                     <p class="hero-description">
-                        Computer Science and Mathematics graduate
-                        passionate about building useful software,
-                        web applications and digital solutions.
+                        Computer Science and Mathematics graduate passionate
+                        about building useful software, web applications and
+                        digital solutions.
                     </p>
 
 
                     <div class="hero-buttons">
 
-                        <a href="#projects"
-                            class="button primary-button">
-                            View My Work →
+                        <a href="#projects" class="button primary-button">
+                            View My Projects
+                            <i class="fa-solid fa-arrow-right"></i>
                         </a>
 
-                        <a href="https://github.com/NsovoNkunaSA"
+                        <a
+                            href="https://github.com/NsovoNkunaSA"
                             target="_blank"
                             rel="noopener noreferrer"
-                            class="button secondary-button">
-                            GitHub ↗
+                            class="button secondary-button"
+                        >
+                            GitHub
+                            <i class="fa-brands fa-github"></i>
                         </a>
 
                     </div>
 
 
-                    <div class="social-links">
+                    <div class="hero-socials">
 
-                        <a href="https://github.com/NsovoNkunaSA"
+                        <a
+                            href="https://github.com/NsovoNkunaSA"
                             target="_blank"
-                            rel="noopener noreferrer">
-                            GitHub
+                            rel="noopener noreferrer"
+                            aria-label="GitHub"
+                        >
+                            <i class="fa-brands fa-github"></i>
                         </a>
 
-                        <span>•</span>
+                        <a
+                            href="#"
+                            aria-label="LinkedIn"
+                        >
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
 
-                        <a href="YOUR_LINKEDIN_URL"
-                            target="_blank"
-                            rel="noopener noreferrer">
-                            LinkedIn
+                        <a
+                            href="mailto:YOUR_EMAIL@gmail.com"
+                            aria-label="Email"
+                        >
+                            <i class="fa-solid fa-envelope"></i>
                         </a>
 
                     </div>
@@ -144,36 +165,77 @@
                 </div>
 
 
-                <div class="hero-card">
+                <!-- Developer Card -->
 
-                    <div class="code-window">
+                <div class="hero-visual">
 
-                        <div class="window-top">
+                    <div class="code-card">
 
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                        <div class="code-header">
+
+                            <div class="window-buttons">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                            <span class="code-file">
+                                developer.js
+                            </span>
 
                         </div>
 
-                        <pre><code><span class="code-purple">const</span> developer = {
-    name: <span class="code-green">"Nsovo Nkuna"</span>,
-    degree: <span class="code-green">"Computer Science"</span>,
-    university: <span class="code-green">"Wits"</span>,
-    passion: <span class="code-green">"Software"</span>,
-    status: <span class="code-green">"Building..."</span>
+
+                        <div class="code-body">
+
+<pre><code><span class="keyword">const</span> developer = {
+
+    <span class="property">name</span>:
+        <span class="string">"Nsovo Nkuna"</span>,
+
+    <span class="property">degree</span>:
+        <span class="string">"Computer Science"</span>,
+
+    <span class="property">university</span>:
+        <span class="string">"Wits"</span>,
+
+    <span class="property">passion</span>:
+        <span class="string">"Software"</span>,
+
+    <span class="property">status</span>:
+        <span class="string">"Building..."</span>
+
 };</code></pre>
 
+                        </div>
+
+                    </div>
+
+
+                    <div class="floating-tech tech-one">
+                        <img
+                            src="https://cdn.simpleicons.org/javascript"
+                            alt="JavaScript"
+                        >
+                    </div>
+
+                    <div class="floating-tech tech-two">
+                        <img
+                            src="https://cdn.simpleicons.org/html5"
+                            alt="HTML5"
+                        >
+                    </div>
+
+                    <div class="floating-tech tech-three">
+                        <img
+                            src="https://cdn.simpleicons.org/nodedotjs"
+                            alt="Node.js"
+                        >
                     </div>
 
                 </div>
 
             </div>
-
-
-            <a href="#about" class="scroll-down">
-                ↓ Scroll to explore
-            </a>
 
         </section>
 
@@ -182,93 +244,97 @@
              ABOUT
         ========================== -->
 
-        <section id="about" class="section reveal">
+        <section id="about" class="section">
 
-            <div class="section-container">
+            <div class="container">
 
-                <p class="section-label">
-                    ABOUT ME
-                </p>
+                <div class="section-grid about-grid">
 
-                <h2 class="section-title">
-                    Turning ideas into <span>software</span>
-                </h2>
+                    <div class="about-image">
 
+                        <div class="image-placeholder">
 
-                <div class="about-content">
+                            <i class="fa-solid fa-laptop-code"></i>
 
-                    <div class="about-text">
+                            <span>
+                                Building with code
+                            </span>
 
-                        <p>
-                            I am a Computer Science and Mathematics
-                            graduate from the University of the
-                            Witwatersrand.
-                        </p>
-
-                        <p>
-                            I enjoy building practical software
-                            projects and learning technologies through
-                            hands-on development.
-                        </p>
-
-                        <p>
-                            My interests include web development,
-                            software engineering, APIs, backend
-                            development and building applications that
-                            solve real problems.
-                        </p>
+                        </div>
 
                     </div>
 
 
-                    <div class="about-details">
+                    <div class="about-content">
 
-                        <div class="detail">
+                        <p class="section-label">
+                            ABOUT ME
+                        </p>
 
-                            <div class="detail-icon">
-                                🎓
+                        <h2>
+                            Computer Science
+                            <span>Graduate</span>
+                        </h2>
+
+                        <p>
+                            I am a Computer Science and Mathematics graduate
+                            from the University of the Witwatersrand.
+                        </p>
+
+                        <p>
+                            I enjoy building practical software projects,
+                            learning new technologies and solving problems
+                            through programming.
+                        </p>
+
+
+                        <div class="about-details">
+
+                            <div class="detail-card">
+
+                                <div class="detail-icon">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                </div>
+
+                                <div>
+                                    <strong>Education</strong>
+                                    <p>
+                                        BSc Computer Science & Mathematics
+                                    </p>
+                                </div>
+
                             </div>
 
-                            <div>
-                                <span>Education</span>
 
-                                <strong>
-                                    University of the Witwatersrand
-                                </strong>
+                            <div class="detail-card">
+
+                                <div class="detail-icon">
+                                    <i class="fa-solid fa-code"></i>
+                                </div>
+
+                                <div>
+                                    <strong>Focus</strong>
+                                    <p>
+                                        Software & Web Development
+                                    </p>
+                                </div>
+
                             </div>
 
-                        </div>
 
+                            <div class="detail-card">
 
-                        <div class="detail">
+                                <div class="detail-icon">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
 
-                            <div class="detail-icon">
-                                💻
-                            </div>
+                                <div>
+                                    <strong>University</strong>
+                                    <p>
+                                        University of the Witwatersrand
+                                    </p>
+                                </div>
 
-                            <div>
-                                <span>Degree</span>
-
-                                <strong>
-                                    BSc Computer Science & Mathematics
-                                </strong>
-                            </div>
-
-                        </div>
-
-
-                        <div class="detail">
-
-                            <div class="detail-icon">
-                                🚀
-                            </div>
-
-                            <div>
-                                <span>Focus</span>
-
-                                <strong>
-                                    Software & Web Development
-                                </strong>
                             </div>
 
                         </div>
@@ -286,74 +352,114 @@
              PROJECTS
         ========================== -->
 
-        <section id="projects"
-            class="section projects-section reveal">
+        <section id="projects" class="section projects-section">
 
-            <div class="section-container">
+            <div class="container">
 
-                <p class="section-label">
-                    MY WORK
-                </p>
+                <div class="section-heading">
 
-                <h2 class="section-title">
-                    Featured <span>Projects</span>
-                </h2>
+                    <div>
 
-                <p class="section-description">
-                    A selection of projects I have built while
-                    developing my software engineering skills.
-                </p>
+                        <p class="section-label">
+                            MY WORK
+                        </p>
+
+                        <h2>
+                            Featured <span>Projects</span>
+                        </h2>
+
+                        <p>
+                            Some of the projects I've built while developing
+                            my software and web development skills.
+                        </p>
+
+                    </div>
+
+                </div>
 
 
                 <div class="projects-grid">
 
 
-                    <!-- SCOUTIFY -->
+                    <!-- Scoutify -->
 
                     <article class="project-card">
 
-                        <div class="project-top">
+                        <div class="project-image scoutify-image">
 
-                            <span class="project-number">
-                                01
-                            </span>
-
-                            <span class="project-icon">
-                                ⚽
-                            </span>
+                            <i class="fa-solid fa-person-running"></i>
 
                         </div>
 
-                        <h3>
-                            Scoutify
-                        </h3>
+                        <div class="project-content">
 
-                        <p>
-                            A platform designed to help talented
-                            athletes showcase their profiles and work
-                            to scouts.
-                        </p>
+                            <div class="project-title-row">
 
-                        <div class="technologies">
+                                <h3>Scoutify</h3>
 
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                            <span>Firebase</span>
+                                <a
+                                    href="https://github.com/Scoutify-devops/scoutify"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="Scoutify GitHub repository"
+                                >
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
 
-                        </div>
+                            </div>
 
-                        <div class="project-links">
+                            <p>
+                                A platform designed to connect athletes with
+                                scouts and provide athletes with an opportunity
+                                to showcase their profiles and abilities.
+                            </p>
 
-                            <a href="#"
-                                class="disabled-link">
-                                Live Demo
-                            </a>
 
-                            <a href="https://github.com/Scoutify-devops/scoutify"
+                            <div class="tech-tags">
+
+                                <span>
+                                    <img
+                                        src="https://cdn.simpleicons.org/html5"
+                                        alt=""
+                                    >
+                                    HTML
+                                </span>
+
+                                <span>
+                                    <img
+                                        src="https://cdn.simpleicons.org/css3"
+                                        alt=""
+                                    >
+                                    CSS
+                                </span>
+
+                                <span>
+                                    <img
+                                        src="https://cdn.simpleicons.org/javascript"
+                                        alt=""
+                                    >
+                                    JavaScript
+                                </span>
+
+                                <span>
+                                    <img
+                                        src="https://cdn.simpleicons.org/firebase"
+                                        alt=""
+                                    >
+                                    Firebase
+                                </span>
+
+                            </div>
+
+
+                            <a
+                                href="https://github.com/Scoutify-devops/scoutify"
                                 target="_blank"
-                                rel="noopener noreferrer">
-                                Repository ↗
+                                rel="noopener noreferrer"
+                                class="project-link"
+                            >
+                                View Repository
+                                <i class="fa-brands fa-github"></i>
                             </a>
 
                         </div>
@@ -361,52 +467,80 @@
                     </article>
 
 
-                    <!-- STRIPE -->
+                    <!-- Stripe -->
 
                     <article class="project-card">
 
-                        <div class="project-top">
+                        <div class="project-image stripe-image">
 
-                            <span class="project-number">
-                                02
-                            </span>
-
-                            <span class="project-icon">
-                                💳
-                            </span>
+                            <img
+                                src="https://cdn.simpleicons.org/stripe"
+                                alt="Stripe"
+                            >
 
                         </div>
 
-                        <h3>
-                            Stripe Payments
-                        </h3>
+                        <div class="project-content">
 
-                        <p>
-                            A payment application demonstrating
-                            Stripe integration with a Node.js backend
-                            and frontend interface.
-                        </p>
+                            <div class="project-title-row">
 
-                        <div class="technologies">
+                                <h3>Stripe Payments</h3>
 
-                            <span>JavaScript</span>
-                            <span>Node.js</span>
-                            <span>Stripe</span>
-                            <span>API</span>
+                                <a
+                                    href="https://github.com/NsovoNkunaSA/Payments-with-Stripe-and-Node.js"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="Stripe project repository"
+                                >
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
 
-                        </div>
+                            </div>
 
-                        <div class="project-links">
+                            <p>
+                                A Node.js payment project integrating Stripe
+                                for handling online payment functionality and
+                                checkout.
+                            </p>
 
-                            <a href="#"
-                                class="disabled-link">
-                                Live Demo
-                            </a>
 
-                            <a href="https://github.com/NsovoNkunaSA/Payments-with-Stripe-and-Node.js"
+                            <div class="tech-tags">
+
+                                <span>
+                                    <img
+                                        src="https://cdn.simpleicons.org/nodedotjs"
+                                        alt=""
+                                    >
+                                    Node.js
+                                </span>
+
+                                <span>
+                                    <img
+                                        src="https://cdn.simpleicons.org/stripe"
+                                        alt=""
+                                    >
+                                    Stripe
+                                </span>
+
+                                <span>
+                                    <img
+                                        src="https://cdn.simpleicons.org/javascript"
+                                        alt=""
+                                    >
+                                    JavaScript
+                                </span>
+
+                            </div>
+
+
+                            <a
+                                href="https://github.com/NsovoNkunaSA/Payments-with-Stripe-and-Node.js"
                                 target="_blank"
-                                rel="noopener noreferrer">
-                                Repository ↗
+                                rel="noopener noreferrer"
+                                class="project-link"
+                            >
+                                View Repository
+                                <i class="fa-brands fa-github"></i>
                             </a>
 
                         </div>
@@ -414,51 +548,85 @@
                     </article>
 
 
-                    <!-- FREELYNK -->
+                    <!-- FreeLynk -->
 
                     <article class="project-card">
 
-                        <div class="project-top">
+                        <div class="project-image freelink-image">
 
-                            <span class="project-number">
-                                03
-                            </span>
-
-                            <span class="project-icon">
-                                💼
-                            </span>
+                            <i class="fa-solid fa-briefcase"></i>
 
                         </div>
 
-                        <h3>
-                            FreeLynk
-                        </h3>
+                        <div class="project-content">
 
-                        <p>
-                            A freelancer management platform designed
-                            to connect freelancers and clients.
-                        </p>
+                            <div class="project-title-row">
 
-                        <div class="technologies">
+                                <h3>FreeLynk</h3>
 
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                            <span>Jest</span>
+                                <a
+                                    href="https://github.com/NsovoNkunaSA/Freelancer-Management-Platform"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="FreeLynk GitHub repository"
+                                >
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
 
-                        </div>
+                            </div>
 
-                        <div class="project-links">
+                            <p>
+                                A freelancer management platform designed to
+                                connect clients and freelancers while providing
+                                useful project management features.
+                            </p>
 
-                            <a href="#"
-                                class="disabled-link">
-                                Live Demo
-                            </a>
 
-                            <a href="https://github.com/NsovoNkunaSA/Freelancer-Management-Platform"
+                            <div class="tech-tags">
+
+                                <span>
+                                    <img
+                                        src="https://cdn.simpleicons.org/html5"
+                                        alt=""
+                                    >
+                                    HTML
+                                </span>
+
+                                <span>
+                                    <img
+                                        src="https://cdn.simpleicons.org/css3"
+                                        alt=""
+                                    >
+                                    CSS
+                                </span>
+
+                                <span>
+                                    <img
+                                        src="https://cdn.simpleicons.org/javascript"
+                                        alt=""
+                                    >
+                                    JavaScript
+                                </span>
+
+                                <span>
+                                    <img
+                                        src="https://cdn.simpleicons.org/jest"
+                                        alt=""
+                                    >
+                                    Jest
+                                </span>
+
+                            </div>
+
+
+                            <a
+                                href="https://github.com/NsovoNkunaSA/Freelancer-Management-Platform"
                                 target="_blank"
-                                rel="noopener noreferrer">
-                                Repository ↗
+                                rel="noopener noreferrer"
+                                class="project-link"
+                            >
+                                View Repository
+                                <i class="fa-brands fa-github"></i>
                             </a>
 
                         </div>
@@ -466,52 +634,85 @@
                     </article>
 
 
-                    <!-- JAVASCRIPT -->
+                    <!-- JavaScript Projects -->
 
                     <article class="project-card">
 
-                        <div class="project-top">
+                        <div class="project-image javascript-image">
 
-                            <span class="project-number">
-                                04
-                            </span>
-
-                            <span class="project-icon">
-                                ⚡
-                            </span>
+                            <img
+                                src="https://cdn.simpleicons.org/javascript"
+                                alt="JavaScript"
+                            >
 
                         </div>
 
-                        <h3>
-                            JavaScript Projects
-                        </h3>
+                        <div class="project-content">
 
-                        <p>
-                            Practical JavaScript projects focused on
-                            APIs, Fetch, asynchronous programming,
-                            JSON and event listeners.
-                        </p>
+                            <div class="project-title-row">
 
-                        <div class="technologies">
+                                <h3>JavaScript Projects</h3>
 
-                            <span>JavaScript</span>
-                            <span>Fetch</span>
-                            <span>Async/Await</span>
-                            <span>JSON</span>
+                                <a
+                                    href="https://github.com/NsovoNkunaSA"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="Nsovo GitHub profile"
+                                >
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
 
-                        </div>
+                            </div>
 
-                        <div class="project-links">
+                            <p>
+                                A collection of practical JavaScript projects
+                                covering APIs, event listeners, asynchronous
+                                programming, JSON and DOM manipulation.
+                            </p>
 
-                            <a href="#"
-                                class="disabled-link">
-                                Live Demo
-                            </a>
 
-                            <a href="https://github.com/NsovoNkunaSA"
+                            <div class="tech-tags">
+
+                                <span>
+                                    <img
+                                        src="https://cdn.simpleicons.org/javascript"
+                                        alt=""
+                                    >
+                                    JavaScript
+                                </span>
+
+                                <span>
+                                    <img
+                                        src="https://cdn.simpleicons.org/html5"
+                                        alt=""
+                                    >
+                                    HTML
+                                </span>
+
+                                <span>
+                                    <img
+                                        src="https://cdn.simpleicons.org/css3"
+                                        alt=""
+                                    >
+                                    CSS
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-cloud-arrow-down"></i>
+                                    APIs
+                                </span>
+
+                            </div>
+
+
+                            <a
+                                href="https://github.com/NsovoNkunaSA"
                                 target="_blank"
-                                rel="noopener noreferrer">
-                                GitHub ↗
+                                rel="noopener noreferrer"
+                                class="project-link"
+                            >
+                                View GitHub
+                                <i class="fa-brands fa-github"></i>
                             </a>
 
                         </div>
@@ -529,67 +730,190 @@
              SKILLS
         ========================== -->
 
-        <section id="skills" class="section reveal">
+        <section id="skills" class="section">
 
-            <div class="section-container">
+            <div class="container">
 
-                <p class="section-label">
-                    SKILLS
-                </p>
+                <div class="section-heading">
 
-                <h2 class="section-title">
-                    My <span>Technical Skills</span>
-                </h2>
+                    <div>
+
+                        <p class="section-label">
+                            TECHNOLOGIES
+                        </p>
+
+                        <h2>
+                            My <span>Skills</span>
+                        </h2>
+
+                        <p>
+                            Technologies and tools I have worked with.
+                        </p>
+
+                    </div>
+
+                </div>
 
 
                 <div class="skills-grid">
 
-                    <div class="skill">
-                        <div class="skill-icon">🌐</div>
-                        <h3>HTML</h3>
-                        <p>Semantic web development</p>
+
+                    <!-- HTML -->
+
+                    <div class="skill-card">
+
+                        <img
+                            src="https://cdn.simpleicons.org/html5"
+                            alt="HTML5"
+                        >
+
+                        <h3>HTML5</h3>
+
+                        <p>Web Structure</p>
+
                     </div>
 
-                    <div class="skill">
-                        <div class="skill-icon">🎨</div>
-                        <h3>CSS</h3>
-                        <p>Responsive web design</p>
+
+                    <!-- CSS -->
+
+                    <div class="skill-card">
+
+                        <img
+                            src="https://cdn.simpleicons.org/css3"
+                            alt="CSS3"
+                        >
+
+                        <h3>CSS3</h3>
+
+                        <p>Web Design</p>
+
                     </div>
 
-                    <div class="skill">
-                        <div class="skill-icon">⚡</div>
+
+                    <!-- JavaScript -->
+
+                    <div class="skill-card">
+
+                        <img
+                            src="https://cdn.simpleicons.org/javascript"
+                            alt="JavaScript"
+                        >
+
                         <h3>JavaScript</h3>
-                        <p>Interactive applications</p>
+
+                        <p>Programming</p>
+
                     </div>
 
-                    <div class="skill">
-                        <div class="skill-icon">🟢</div>
+
+                    <!-- Node -->
+
+                    <div class="skill-card">
+
+                        <img
+                            src="https://cdn.simpleicons.org/nodedotjs"
+                            alt="Node.js"
+                        >
+
                         <h3>Node.js</h3>
-                        <p>Backend development</p>
+
+                        <p>Backend</p>
+
                     </div>
 
-                    <div class="skill">
-                        <div class="skill-icon">🔗</div>
-                        <h3>APIs</h3>
-                        <p>HTTP and JSON</p>
-                    </div>
 
-                    <div class="skill">
-                        <div class="skill-icon">🔥</div>
+                    <!-- Firebase -->
+
+                    <div class="skill-card">
+
+                        <img
+                            src="https://cdn.simpleicons.org/firebase"
+                            alt="Firebase"
+                        >
+
                         <h3>Firebase</h3>
-                        <p>Authentication and services</p>
+
+                        <p>Authentication</p>
+
                     </div>
 
-                    <div class="skill">
-                        <div class="skill-icon">💳</div>
+
+                    <!-- Stripe -->
+
+                    <div class="skill-card">
+
+                        <img
+                            src="https://cdn.simpleicons.org/stripe"
+                            alt="Stripe"
+                        >
+
                         <h3>Stripe</h3>
-                        <p>Payment integration</p>
+
+                        <p>Payments</p>
+
                     </div>
 
-                    <div class="skill">
-                        <div class="skill-icon">🐙</div>
-                        <h3>Git & GitHub</h3>
-                        <p>Version control</p>
+
+                    <!-- Git -->
+
+                    <div class="skill-card">
+
+                        <img
+                            src="https://cdn.simpleicons.org/git"
+                            alt="Git"
+                        >
+
+                        <h3>Git</h3>
+
+                        <p>Version Control</p>
+
+                    </div>
+
+
+                    <!-- GitHub -->
+
+                    <div class="skill-card">
+
+                        <img
+                            src="https://cdn.simpleicons.org/github"
+                            alt="GitHub"
+                        >
+
+                        <h3>GitHub</h3>
+
+                        <p>Repositories</p>
+
+                    </div>
+
+
+                    <!-- API -->
+
+                    <div class="skill-card">
+
+                        <div class="skill-icon-generic">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+
+                        <h3>APIs</h3>
+
+                        <p>HTTP & JSON</p>
+
+                    </div>
+
+
+                    <!-- VS Code -->
+
+                    <div class="skill-card">
+
+                        <img
+                            src="https://cdn.simpleicons.org/visualstudiocode"
+                            alt="Visual Studio Code"
+                        >
+
+                        <h3>VS Code</h3>
+
+                        <p>Development</p>
+
                     </div>
 
                 </div>
@@ -603,46 +927,158 @@
              CONTACT
         ========================== -->
 
-        <section id="contact"
-            class="section contact-section reveal">
+        <section id="contact" class="section contact-section">
 
-            <div class="section-container contact-container">
+            <div class="container">
 
-                <p class="section-label">
-                    CONTACT
-                </p>
+                <div class="contact-container">
 
-                <h2 class="section-title">
-                    Let's build something <span>together.</span>
-                </h2>
+                    <div class="contact-content">
 
-                <p>
-                    I am interested in software development
-                    opportunities, graduate roles, internships and
-                    interesting projects.
-                </p>
+                        <p class="section-label">
+                            GET IN TOUCH
+                        </p>
+
+                        <h2>
+                            Let's Build Something
+                            <span>Together</span>
+                        </h2>
+
+                        <p>
+                            I'm open to opportunities, collaborations and
+                            interesting software projects.
+                        </p>
 
 
-                <div class="contact-buttons">
+                        <div class="contact-details">
 
-                    <a href="mailto:YOUR_EMAIL@gmail.com"
-                        class="button primary-button">
-                        📧 Email Me
-                    </a>
+                            <a
+                                href="mailto:YOUR_EMAIL@gmail.com"
+                                class="contact-item"
+                            >
 
-                    <a href="https://github.com/NsovoNkunaSA"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="button secondary-button">
-                        🐙 GitHub
-                    </a>
+                                <div class="contact-icon">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
 
-                    <a href="YOUR_LINKEDIN_URL"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="button secondary-button">
-                        LinkedIn ↗
-                    </a>
+                                <div>
+                                    <strong>Email</strong>
+                                    <span>YOUR_EMAIL@gmail.com</span>
+                                </div>
+
+                            </a>
+
+
+                            <a
+                                href="https://github.com/NsovoNkunaSA"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="contact-item"
+                            >
+
+                                <div class="contact-icon">
+                                    <i class="fa-brands fa-github"></i>
+                                </div>
+
+                                <div>
+                                    <strong>GitHub</strong>
+                                    <span>@NsovoNkunaSA</span>
+                                </div>
+
+                            </a>
+
+
+                            <a
+                                href="#"
+                                class="contact-item"
+                            >
+
+                                <div class="contact-icon">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </div>
+
+                                <div>
+                                    <strong>LinkedIn</strong>
+                                    <span>Connect with me</span>
+                                </div>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Contact Form -->
+
+                    <form
+                        class="contact-form"
+                        id="contact-form"
+                    >
+
+                        <div class="form-group">
+
+                            <label for="name">
+                                Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Your name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="email">
+                                Email
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="your@email.com"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="message">
+                                Message
+                            </label>
+
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="5"
+                                placeholder="Your message..."
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="button primary-button form-button"
+                        >
+
+                            Send Message
+
+                            <i class="fa-solid fa-paper-plane"></i>
+
+                        </button>
+
+                    </form>
 
                 </div>
 
@@ -657,26 +1093,63 @@
          FOOTER
     ========================== -->
 
-    <footer>
+    <footer class="footer">
 
-        <p>
-            © <span id="year"></span> Nsovo Nkuna.
-            Built with HTML, CSS & JavaScript.
-        </p>
+        <div class="container footer-container">
+
+            <p>
+                © <span id="year"></span>
+                Nsovo Nkuna.
+                All rights reserved.
+            </p>
+
+
+            <div class="footer-socials">
+
+                <a
+                    href="https://github.com/NsovoNkunaSA"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub"
+                >
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+                <a
+                    href="#"
+                    aria-label="LinkedIn"
+                >
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a
+                    href="mailto:YOUR_EMAIL@gmail.com"
+                    aria-label="Email"
+                >
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+
+            </div>
+
+        </div>
 
     </footer>
 
 
-    <!-- BACK TO TOP -->
+    <!-- =========================
+         BACK TO TOP
+    ========================== -->
 
-    <button id="back-to-top"
-        class="back-to-top">
-        ↑
+    <button
+        id="back-to-top"
+        class="back-to-top"
+        aria-label="Back to top"
+    >
+        <i class="fa-solid fa-arrow-up"></i>
     </button>
 
 
     <script src="script.js"></script>
 
 </body>
-
 </html>
