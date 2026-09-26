@@ -1,681 +1,1238 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-        content="Nsovo Nkuna - Computer Science graduate and software developer portfolio.">
+<meta name="description"
+    content="Nsovo Ike Nkuna - Computer Science graduate and software developer portfolio.">
 
-    <title>Nsovo Nkuna | Software Developer</title>
+<title>Nsovo Ike Nkuna | Software Developer</title>
 
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
+```
+
 </head>
 
 <body>
 
-    <!-- Animated background -->
+```
+<!-- Animated background -->
 
-    <div class="background-effect"></div>
+<div class="background-effect"></div>
+
+
+<!-- =========================
+     NAVIGATION
+========================== -->
+
+<header>
+
+    <nav class="navbar">
+
+        <a href="#home" class="logo">
+            NIN
+        </a>
+
+
+        <button id="menu-button"
+            class="menu-button"
+            aria-label="Open navigation menu">
+
+            Menu
+
+        </button>
+
+
+        <ul id="nav-links" class="nav-links">
+
+            <li>
+                <a href="#home" class="nav-link active">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="#about" class="nav-link">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="#experience" class="nav-link">
+                    Experience
+                </a>
+            </li>
+
+            <li>
+                <a href="#projects" class="nav-link">
+                    Projects
+                </a>
+            </li>
+
+            <li>
+                <a href="#skills" class="nav-link">
+                    Skills
+                </a>
+            </li>
+
+            <li>
+                <a href="#contact" class="nav-link">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+
+        <button id="theme-button"
+            class="theme-button"
+            aria-label="Toggle colour theme">
+
+            Theme
+
+        </button>
+
+    </nav>
+
+</header>
+
+
+<main>
 
 
     <!-- =========================
-         NAVIGATION
+         HERO
     ========================== -->
 
-    <header>
+    <section id="home" class="hero">
 
-        <nav class="navbar">
+        <div class="hero-content">
 
-            <a href="#home" class="logo">
-                <span></span>
-            </a>
+            <div class="hero-text">
 
-
-            <button id="menu-button" class="menu-button">
-                ☰
-            </button>
-
-
-            <ul id="nav-links" class="nav-links">
-
-                <li>
-                    <a href="#home" class="nav-link active">Home</a>
-                </li>
-
-                <li>
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-
-                <li>
-                    <a href="#projects" class="nav-link">Projects</a>
-                </li>
-
-                <li>
-                    <a href="#skills" class="nav-link">Skills</a>
-                </li>
-
-                <li>
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
-
-            </ul>
-
-
-            <button id="theme-button" class="theme-button">
-                ☀
-            </button>
-
-        </nav>
-
-    </header>
-
-
-    <main>
-
-
-        <!-- =========================
-             HERO
-        ========================== -->
-
-        <section id="home" class="hero">
-
-            <div class="hero-content">
-
-                <div class="hero-text">
-
-                    <p class="greeting">
-                        👋 Hello, I'm
-                    </p>
-
-                    <h1>
-                        Nsovo Nkuna
-                    </h1>
-
-                    <h2>
-                        I'm a
-                        <span id="typing-text"></span>
-                    </h2>
-
-                    <p class="hero-description">
-                        Computer Science and Mathematics graduate
-                        passionate about building useful software,
-                        web applications and digital solutions.
-                    </p>
-
-
-                    <div class="hero-buttons">
-
-                        <a href="#projects"
-                            class="button primary-button">
-                            View My Work →
-                        </a>
-
-                        <a href="https://github.com/NsovoNkunaSA"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="button secondary-button">
-                            GitHub ↗
-                        </a>
-
-                    </div>
-
-
-                    <div class="social-links">
-
-                        <a href="https://github.com/NsovoNkunaSA"
-                            target="_blank"
-                            rel="noopener noreferrer">
-                            GitHub
-                        </a>
-
-                        <span>•</span>
-
-                        <a href="YOUR_LINKEDIN_URL"
-                            target="_blank"
-                            rel="noopener noreferrer">
-                            LinkedIn
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <div class="hero-card">
-
-                    <div class="code-window">
-
-                        <div class="window-top">
-
-                            <span></span>
-                            <span></span>
-                            <span></span>
-
-                        </div>
-
-                        <pre><code><span class="code-purple">const</span> developer = {
-    name: <span class="code-green">"Nsovo Nkuna"</span>,
-    degree: <span class="code-green">"Computer Science"</span>,
-    university: <span class="code-green">"Wits"</span>,
-    passion: <span class="code-green">"Software"</span>,
-    status: <span class="code-green">"Building..."</span>
-};</code></pre>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <a href="#about" class="scroll-down">
-                ↓ Scroll to explore
-            </a>
-
-        </section>
-
-
-        <!-- =========================
-             ABOUT
-        ========================== -->
-
-        <section id="about" class="section reveal">
-
-            <div class="section-container">
-
-                <p class="section-label">
-                    ABOUT ME
+                <p class="greeting">
+                    COMPUTER SCIENCE GRADUATE
                 </p>
 
-                <h2 class="section-title">
-                    Turning ideas into <span>software</span>
+
+                <h1>
+                    Nsovo Ike Nkuna
+                </h1>
+
+
+                <h2>
+                    Software Developer
                 </h2>
 
 
-                <div class="about-content">
+                <p class="hero-description">
 
-                    <div class="about-text">
+                    Computer Science and Mathematics graduate
+                    from the University of the Witwatersrand,
+                    focused on software development, backend
+                    systems, web applications and practical
+                    technology solutions.
 
-                        <p>
-                            I am a Computer Science and Mathematics
-                            graduate from the University of the
-                            Witwatersrand.
-                        </p>
-
-                        <p>
-                            I enjoy building practical software
-                            projects and learning technologies through
-                            hands-on development.
-                        </p>
-
-                        <p>
-                            My interests include web development,
-                            software engineering, APIs, backend
-                            development and building applications that
-                            solve real problems.
-                        </p>
-
-                    </div>
-
-
-                    <div class="about-details">
-
-                        <div class="detail">
-
-                            <div class="detail-icon">
-                                🎓
-                            </div>
-
-                            <div>
-                                <span>Education</span>
-
-                                <strong>
-                                    University of the Witwatersrand
-                                </strong>
-                            </div>
-
-                        </div>
-
-
-                        <div class="detail">
-
-                            <div class="detail-icon">
-                                💻
-                            </div>
-
-                            <div>
-                                <span>Degree</span>
-
-                                <strong>
-                                    BSc Computer Science & Mathematics
-                                </strong>
-                            </div>
-
-                        </div>
-
-
-                        <div class="detail">
-
-                            <div class="detail-icon">
-                                🚀
-                            </div>
-
-                            <div>
-                                <span>Focus</span>
-
-                                <strong>
-                                    Software & Web Development
-                                </strong>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             PROJECTS
-        ========================== -->
-
-        <section id="projects"
-            class="section projects-section reveal">
-
-            <div class="section-container">
-
-                <p class="section-label">
-                    MY WORK
-                </p>
-
-                <h2 class="section-title">
-                    Featured <span>Projects</span>
-                </h2>
-
-                <p class="section-description">
-                    A selection of projects I have built while
-                    developing my software engineering skills.
                 </p>
 
 
-                <div class="projects-grid">
+                <div class="hero-buttons">
 
-
-                    <!-- SCOUTIFY -->
-
-                    <article class="project-card">
-
-                        <div class="project-top">
-
-                            <span class="project-number">
-                                01
-                            </span>
-
-                            <span class="project-icon">
-                                ⚽
-                            </span>
-
-                        </div>
-
-                        <h3>
-                            Scoutify
-                        </h3>
-
-                        <p>
-                            A platform designed to help talented
-                            athletes showcase their profiles and work
-                            to scouts.
-                        </p>
-
-                        <div class="technologies">
-
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                            <span>Firebase</span>
-
-                        </div>
-
-                        <div class="project-links">
-
-                            <a href="#"
-                                class="disabled-link">
-                                Live Demo
-                            </a>
-
-                            <a href="https://github.com/Scoutify-devops/scoutify"
-                                target="_blank"
-                                rel="noopener noreferrer">
-                                Repository ↗
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- STRIPE -->
-
-                    <article class="project-card">
-
-                        <div class="project-top">
-
-                            <span class="project-number">
-                                02
-                            </span>
-
-                            <span class="project-icon">
-                                💳
-                            </span>
-
-                        </div>
-
-                        <h3>
-                            Stripe Payments
-                        </h3>
-
-                        <p>
-                            A payment application demonstrating
-                            Stripe integration with a Node.js backend
-                            and frontend interface.
-                        </p>
-
-                        <div class="technologies">
-
-                            <span>JavaScript</span>
-                            <span>Node.js</span>
-                            <span>Stripe</span>
-                            <span>API</span>
-
-                        </div>
-
-                        <div class="project-links">
-
-                            <a href="#"
-                                class="disabled-link">
-                                Live Demo
-                            </a>
-
-                            <a href="https://github.com/NsovoNkunaSA/Payments-with-Stripe-and-Node.js"
-                                target="_blank"
-                                rel="noopener noreferrer">
-                                Repository ↗
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- FREELYNK -->
-
-                    <article class="project-card">
-
-                        <div class="project-top">
-
-                            <span class="project-number">
-                                03
-                            </span>
-
-                            <span class="project-icon">
-                                💼
-                            </span>
-
-                        </div>
-
-                        <h3>
-                            FreeLynk
-                        </h3>
-
-                        <p>
-                            A freelancer management platform designed
-                            to connect freelancers and clients.
-                        </p>
-
-                        <div class="technologies">
-
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                            <span>Jest</span>
-
-                        </div>
-
-                        <div class="project-links">
-
-                            <a href="#"
-                                class="disabled-link">
-                                Live Demo
-                            </a>
-
-                            <a href="https://github.com/NsovoNkunaSA/Freelancer-Management-Platform"
-                                target="_blank"
-                                rel="noopener noreferrer">
-                                Repository ↗
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- JAVASCRIPT -->
-
-                    <article class="project-card">
-
-                        <div class="project-top">
-
-                            <span class="project-number">
-                                04
-                            </span>
-
-                            <span class="project-icon">
-                                ⚡
-                            </span>
-
-                        </div>
-
-                        <h3>
-                            JavaScript Projects
-                        </h3>
-
-                        <p>
-                            Practical JavaScript projects focused on
-                            APIs, Fetch, asynchronous programming,
-                            JSON and event listeners.
-                        </p>
-
-                        <div class="technologies">
-
-                            <span>JavaScript</span>
-                            <span>Fetch</span>
-                            <span>Async/Await</span>
-                            <span>JSON</span>
-
-                        </div>
-
-                        <div class="project-links">
-
-                            <a href="#"
-                                class="disabled-link">
-                                Live Demo
-                            </a>
-
-                            <a href="https://github.com/NsovoNkunaSA"
-                                target="_blank"
-                                rel="noopener noreferrer">
-                                GitHub ↗
-                            </a>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             SKILLS
-        ========================== -->
-
-        <section id="skills" class="section reveal">
-
-            <div class="section-container">
-
-                <p class="section-label">
-                    SKILLS
-                </p>
-
-                <h2 class="section-title">
-                    My <span>Technical Skills</span>
-                </h2>
-
-
-                <div class="skills-grid">
-
-                    <div class="skill">
-                        <div class="skill-icon">🌐</div>
-                        <h3>HTML</h3>
-                        <p>Semantic web development</p>
-                    </div>
-
-                    <div class="skill">
-                        <div class="skill-icon">🎨</div>
-                        <h3>CSS</h3>
-                        <p>Responsive web design</p>
-                    </div>
-
-                    <div class="skill">
-                        <div class="skill-icon">⚡</div>
-                        <h3>JavaScript</h3>
-                        <p>Interactive applications</p>
-                    </div>
-
-                    <div class="skill">
-                        <div class="skill-icon">🟢</div>
-                        <h3>Node.js</h3>
-                        <p>Backend development</p>
-                    </div>
-
-                    <div class="skill">
-                        <div class="skill-icon">🔗</div>
-                        <h3>APIs</h3>
-                        <p>HTTP and JSON</p>
-                    </div>
-
-                    <div class="skill">
-                        <div class="skill-icon"></div>
-                        <h3>Firebase</h3>
-                        <p>Authentication and services</p>
-                    </div>
-
-                    <div class="skill">
-                        <div class="skill-icon"></div>
-                        <h3>Stripe</h3>
-                        <p>Payment integration</p>
-                    </div>
-
-                    <div class="skill">
-                        <div class="skill-icon"></div>
-                        <h3>Git & GitHub</h3>
-                        <p>Version control</p>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             CONTACT
-        ========================== -->
-
-        <section id="contact"
-            class="section contact-section reveal">
-
-            <div class="section-container contact-container">
-
-                <p class="section-label">
-                    CONTACT
-                </p>
-
-                <h2 class="section-title">
-                    Let's build something <span>together.</span>
-                </h2>
-
-                <p>
-                    I am interested in software development
-                    opportunities, graduate roles, internships and
-                    interesting projects.
-                </p>
-
-
-                <div class="contact-buttons">
-
-                    <a href="mailto:YOUR_EMAIL@gmail.com"
+                    <a href="#projects"
                         class="button primary-button">
-                         Email Me
+
+                        View My Work
+
                     </a>
+
 
                     <a href="https://github.com/NsovoNkunaSA"
                         target="_blank"
                         rel="noopener noreferrer"
                         class="button secondary-button">
-                         GitHub
+
+                        GitHub
+
                     </a>
 
-                    <a href="YOUR_LINKEDIN_URL"
+                </div>
+
+
+                <div class="social-links">
+
+                    <a href="https://github.com/NsovoNkunaSA"
                         target="_blank"
-                        rel="noopener noreferrer"
-                        class="button secondary-button">
-                        LinkedIn 
+                        rel="noopener noreferrer">
+
+                        GitHub
+
+                    </a>
+
+
+                    <span>·</span>
+
+
+                    <a href="https://www.linkedin.com/in/nsovo-nkuna-39a98421a/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        LinkedIn
+
                     </a>
 
                 </div>
 
             </div>
 
-        </section>
 
-    </main>
+            <div class="hero-card">
+
+                <div class="code-window">
+
+                    <div class="window-top">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div>
+
+
+                    <pre><code><span class="code-purple">const</span> developer = {
+
+name: <span class="code-green">"Nsovo Nkuna"</span>,
+
+degree: <span class="code-green">"BSc Computer Science"</span>,
+
+university: <span class="code-green">"Wits"</span>,
+
+focus: <span class="code-green">"Software Development"</span>,
+
+status: <span class="code-green">"Open to opportunities"</span>
+```
+
+};</code></pre>
+
+```
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <a href="#about" class="scroll-down">
+
+            Scroll to explore
+
+        </a>
+
+    </section>
 
 
     <!-- =========================
-         FOOTER
+         ABOUT
     ========================== -->
 
-    <footer>
+    <section id="about" class="section reveal">
 
-        <p>
-            © <span id="year"></span> Nsovo Nkuna.
-            Built with HTML, CSS & JavaScript.
-        </p>
+        <div class="section-container">
 
-    </footer>
-
-
-    <!-- BACK TO TOP -->
-
-    <button id="back-to-top"
-        class="back-to-top">
-        ↑
-    </button>
+            <p class="section-label">
+                ABOUT ME
+            </p>
 
 
-    <script src="script.js"></script>
+            <h2 class="section-title">
+                Turning ideas into <span>software</span>
+            </h2>
+
+
+            <div class="about-content">
+
+
+                <div class="about-text">
+
+                    <p>
+
+                        I am a recent Computer Science graduate
+                        from the University of the Witwatersrand,
+                        where I majored in Computer Science and
+                        Mathematics.
+
+                    </p>
+
+
+                    <p>
+
+                        I have a strong foundation in algorithms,
+                        data structures, system programming,
+                        software design and web development.
+                        I enjoy applying theoretical knowledge
+                        to practical software projects.
+
+                    </p>
+
+
+                    <p>
+
+                        My interests include software engineering,
+                        backend development, REST APIs, databases,
+                        web applications, cloud technologies,
+                        computer vision and machine learning.
+
+                    </p>
+
+
+                    <p>
+
+                        I am currently interested in graduate
+                        software development opportunities,
+                        internships and projects where I can
+                        continue developing my technical skills.
+
+                    </p>
+
+                </div>
+
+
+                <div class="about-details">
+
+
+                    <div class="detail">
+
+                        <div class="detail-icon">
+                            01
+                        </div>
+
+                        <div>
+
+                            <span>Education</span>
+
+                            <strong>
+                                University of the Witwatersrand
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="detail">
+
+                        <div class="detail-icon">
+                            02
+                        </div>
+
+                        <div>
+
+                            <span>Degree</span>
+
+                            <strong>
+                                BSc Computer Science & Mathematics
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="detail">
+
+                        <div class="detail-icon">
+                            03
+                        </div>
+
+                        <div>
+
+                            <span>Location</span>
+
+                            <strong>
+                                Johannesburg, South Africa
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ACHIEVEMENTS
+    ========================== -->
+
+    <section id="achievements"
+        class="section reveal">
+
+        <div class="section-container">
+
+            <p class="section-label">
+                ACHIEVEMENTS
+            </p>
+
+
+            <h2 class="section-title">
+                Academic <span>Achievements</span>
+            </h2>
+
+
+            <div class="achievement-list">
+
+
+                <article class="achievement">
+
+                    <span class="achievement-number">
+                        01
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Golden Key International Honour Society
+                        </h3>
+
+                        <p>
+                            Recognized for academic excellence
+                            and ranked among the top 15% of students.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="achievement">
+
+                    <span class="achievement-number">
+                        02
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Dean's List Merit Award
+                        </h3>
+
+                        <p>
+                            Awarded for outstanding academic
+                            performance in the Faculty of Science.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="achievement">
+
+                    <span class="achievement-number">
+                        03
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Academic Distinctions
+                        </h3>
+
+                        <p>
+                            Distinctions achieved in Introduction
+                            to Data Structures and Algorithms,
+                            Basic Computer Organisation and
+                            Calculus 1.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         EXPERIENCE
+    ========================== -->
+
+    <section id="experience"
+        class="section experience-section reveal">
+
+        <div class="section-container">
+
+            <p class="section-label">
+                EXPERIENCE
+            </p>
+
+
+            <h2 class="section-title">
+                Experience & <span>Activities</span>
+            </h2>
+
+
+            <div class="experience-list">
+
+
+                <article class="experience-item">
+
+                    <div class="experience-date">
+                        2025
+                    </div>
+
+
+                    <div class="experience-content">
+
+                        <h3>
+                            BCX Alibaba Cloud
+                        </h3>
+
+                        <h4>
+                            Participant — BCX Alibaba ACA Training Programme
+                        </h4>
+
+
+                        <p>
+
+                            Gained exposure to cloud technologies
+                            and infrastructure through the BCX
+                            Alibaba ACA Training Programme.
+
+                        </p>
+
+
+                        <ul>
+
+                            <li>
+                                Developed knowledge of cloud computing
+                                and distributed systems.
+                            </li>
+
+                            <li>
+                                Explored enterprise cloud solutions
+                                and infrastructure technologies.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </article>
+
+
+                <article class="experience-item">
+
+                    <div class="experience-date">
+                        2023
+                    </div>
+
+
+                    <div class="experience-content">
+
+                        <h3>
+                            Robotics Interest Group
+                        </h3>
+
+                        <h4>
+                            University of the Witwatersrand —
+                            Project Contributor
+                        </h4>
+
+
+                        <p>
+
+                            Collaborated on the development of an
+                            autonomous JetBot using computer vision
+                            and machine learning.
+
+                        </p>
+
+
+                        <ul>
+
+                            <li>
+                                Integrated real-time camera input
+                                for adaptive navigation.
+                            </li>
+
+                            <li>
+                                Implemented obstacle avoidance
+                                functionality.
+                            </li>
+
+                            <li>
+                                Applied OpenCV and machine learning
+                                techniques for environment perception.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROJECTS
+    ========================== -->
+
+    <section id="projects"
+        class="section projects-section reveal">
+
+        <div class="section-container">
+
+            <p class="section-label">
+                MY WORK
+            </p>
+
+
+            <h2 class="section-title">
+                Featured <span>Projects</span>
+            </h2>
+
+
+            <p class="section-description">
+
+                A selection of software projects demonstrating
+                my experience with web development, APIs,
+                backend systems and JavaScript.
+
+            </p>
+
+
+            <div class="projects-grid">
+
+
+                <!-- SCOUTIFY -->
+
+                <article class="project-card">
+
+                    <div class="project-top">
+
+                        <span class="project-number">
+                            01
+                        </span>
+
+                        <span class="project-category">
+                            WEB PLATFORM
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Scoutify
+                    </h3>
+
+
+                    <p>
+
+                        A platform designed to help talented
+                        athletes showcase their profiles and
+                        achievements to scouts.
+
+                    </p>
+
+
+                    <div class="technologies">
+
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Firebase</span>
+
+                    </div>
+
+
+                    <div class="project-links">
+
+                        <a href="#"
+                            class="disabled-link">
+
+                            Live Demo
+
+                        </a>
+
+
+                        <a href="https://github.com/Scoutify-devops/scoutify"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            Repository
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- STRIPE -->
+
+                <article class="project-card">
+
+                    <div class="project-top">
+
+                        <span class="project-number">
+                            02
+                        </span>
+
+                        <span class="project-category">
+                            BACKEND
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Stripe Payments
+                    </h3>
+
+
+                    <p>
+
+                        A payment application demonstrating
+                        Stripe integration with a Node.js backend
+                        and frontend interface.
+
+                    </p>
+
+
+                    <div class="technologies">
+
+                        <span>JavaScript</span>
+                        <span>Node.js</span>
+                        <span>Stripe</span>
+                        <span>API</span>
+
+                    </div>
+
+
+                    <div class="project-links">
+
+                        <a href="#"
+                            class="disabled-link">
+
+                            Live Demo
+
+                        </a>
+
+
+                        <a href="https://github.com/NsovoNkunaSA/Payments-with-Stripe-and-Node.js"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            Repository
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- FREELYNK -->
+
+                <article class="project-card">
+
+                    <div class="project-top">
+
+                        <span class="project-number">
+                            03
+                        </span>
+
+                        <span class="project-category">
+                            WEB APPLICATION
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        FreeLynk
+                    </h3>
+
+
+                    <p>
+
+                        A freelancer management platform designed
+                        to connect freelancers and clients.
+
+                    </p>
+
+
+                    <div class="technologies">
+
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Jest</span>
+
+                    </div>
+
+
+                    <div class="project-links">
+
+                        <a href="#"
+                            class="disabled-link">
+
+                            Live Demo
+
+                        </a>
+
+
+                        <a href="https://github.com/NsovoNkunaSA/Freelancer-Management-Platform"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            Repository
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- JAVASCRIPT -->
+
+                <article class="project-card">
+
+                    <div class="project-top">
+
+                        <span class="project-number">
+                            04
+                        </span>
+
+                        <span class="project-category">
+                            JAVASCRIPT
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        JavaScript Projects
+                    </h3>
+
+
+                    <p>
+
+                        Practical JavaScript projects focused
+                        on APIs, Fetch, asynchronous programming,
+                        JSON, DOM manipulation and event listeners.
+
+                    </p>
+
+
+                    <div class="technologies">
+
+                        <span>JavaScript</span>
+                        <span>Fetch</span>
+                        <span>Async/Await</span>
+                        <span>JSON</span>
+
+                    </div>
+
+
+                    <div class="project-links">
+
+                        <a href="#"
+                            class="disabled-link">
+
+                            Live Demo
+
+                        </a>
+
+
+                        <a href="https://github.com/NsovoNkunaSA"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            GitHub
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SKILLS
+    ========================== -->
+
+    <section id="skills"
+        class="section skills-section reveal">
+
+        <div class="section-container">
+
+            <p class="section-label">
+                TECHNICAL SKILLS
+            </p>
+
+
+            <h2 class="section-title">
+                Technologies & <span>Expertise</span>
+            </h2>
+
+
+            <div class="skills-list">
+
+
+                <!-- PROGRAMMING -->
+
+                <div class="skill-category">
+
+                    <h3>
+                        Programming Languages
+                    </h3>
+
+
+                    <div class="skill-items">
+
+                        <span>C++</span>
+                        <span>Python</span>
+                        <span>Java</span>
+                        <span>JavaScript</span>
+                        <span>HTML</span>
+                        <span>CSS</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SOFTWARE DEVELOPMENT -->
+
+                <div class="skill-category">
+
+                    <h3>
+                        Software Development
+                    </h3>
+
+
+                    <div class="skill-items">
+
+                        <span>Algorithms & Data Structures</span>
+                        <span>Software Design</span>
+                        <span>Operating Systems</span>
+                        <span>Formal Languages</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BACKEND -->
+
+                <div class="skill-category">
+
+                    <h3>
+                        Backend & Web Development
+                    </h3>
+
+
+                    <div class="skill-items">
+
+                        <span>Node.js</span>
+                        <span>REST APIs</span>
+                        <span>Authentication</span>
+                        <span>HTTP</span>
+                        <span>JSON</span>
+                        <span>Web Deployment</span>
+                        <span>MySQL</span>
+                        <span>Databases</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CLOUD -->
+
+                <div class="skill-category">
+
+                    <h3>
+                        Cloud & Infrastructure
+                    </h3>
+
+
+                    <div class="skill-items">
+
+                        <span>Alibaba Cloud</span>
+                        <span>Cloud Computing</span>
+                        <span>Distributed Systems</span>
+                        <span>Enterprise Solutions</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- AI -->
+
+                <div class="skill-category">
+
+                    <h3>
+                        AI & Robotics
+                    </h3>
+
+
+                    <div class="skill-items">
+
+                        <span>Computer Vision</span>
+                        <span>Machine Learning</span>
+                        <span>Autonomous Navigation</span>
+                        <span>OpenCV</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TOOLS -->
+
+                <div class="skill-category">
+
+                    <h3>
+                        Tools & Technologies
+                    </h3>
+
+
+                    <div class="skill-items">
+
+                        <span>Git</span>
+                        <span>GitHub</span>
+                        <span>Postman</span>
+                        <span>VS Code</span>
+                        <span>Microsoft Office</span>
+                        <span>Firebase</span>
+                        <span>Stripe</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROFESSIONAL -->
+
+                <div class="skill-category">
+
+                    <h3>
+                        Professional Skills
+                    </h3>
+
+
+                    <div class="skill-items">
+
+                        <span>Problem Solving</span>
+                        <span>Collaboration</span>
+                        <span>Adaptability</span>
+                        <span>Leadership</span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         EDUCATION
+    ========================== -->
+
+    <section id="education"
+        class="section education-section reveal">
+
+        <div class="section-container">
+
+            <p class="section-label">
+                EDUCATION
+            </p>
+
+
+            <h2 class="section-title">
+                Academic <span>Background</span>
+            </h2>
+
+
+            <div class="education-item">
+
+                <div>
+
+                    <h3>
+                        University of the Witwatersrand
+                    </h3>
+
+                    <p>
+                        Bachelor of Science in Computer Science
+                        and Mathematics
+                    </p>
+
+                </div>
+
+
+                <div class="education-date">
+                    Graduated 13 December 2025
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section id="contact"
+        class="section contact-section reveal">
+
+        <div class="section-container contact-container">
+
+            <p class="section-label">
+                CONTACT
+            </p>
+
+
+            <h2 class="section-title">
+                Let's build something <span>together.</span>
+            </h2>
+
+
+            <p>
+
+                I am interested in software development
+                opportunities, graduate roles, internships
+                and interesting technology projects.
+
+            </p>
+
+
+            <div class="contact-buttons">
+
+
+                <a href="mailto:nsovo.ike03@gmail.com"
+                    class="button primary-button">
+
+                    Email Me
+
+                </a>
+
+
+                <a href="https://github.com/NsovoNkunaSA"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button secondary-button">
+
+                    GitHub
+
+                </a>
+
+
+                <a href="https://www.linkedin.com/in/nsovo-nkuna-39a98421a/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button secondary-button">
+
+                    LinkedIn
+
+                </a>
+
+            </div>
+
+
+            <div class="contact-details">
+
+                <p>
+                    Johannesburg, South Africa
+                </p>
+
+                <p>
+                    nsovo.ike03@gmail.com
+                </p>
+
+                <p>
+                    +27 73 363 4034
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================== -->
+
+<footer>
+
+    <p>
+
+        © <span id="year"></span>
+        Nsovo Ike Nkuna.
+
+        Built with HTML, CSS & JavaScript.
+
+    </p>
+
+</footer>
+
+
+<!-- BACK TO TOP -->
+
+<button id="back-to-top"
+    class="back-to-top"
+    aria-label="Back to top">
+
+    ↑
+
+</button>
+
+
+<script src="script.js"></script>
+```
 
 </body>
 
