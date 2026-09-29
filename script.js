@@ -1,39 +1,51 @@
-
 // =========================
 // MOBILE MENU
 // =========================
 
 const menuButton = document.getElementById("menu-button");
-
 const navLinks = document.getElementById("nav-links");
 
+if (menuButton && navLinks) {
+    menuButton.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
 
-menuButton.addEventListener("click", function () {
+        const menuIsOpen = navLinks.classList.contains("active");
 
-    navLinks.classList.toggle("active");
-    menuButton.setAttribute(
-        "aria-expanded",
-        String(navLinks.classList.contains("active"))
-    );
+        menuButton.setAttribute(
+            "aria-expanded",
+            String(menuIsOpen)
+        );
 
-});
+        menuButton.setAttribute(
+            "aria-label",
+            menuIsOpen
+                ? "Close navigation menu"
+                : "Open navigation menu"
+        );
+    });
+}
 
 
-// Close menu when a link is clicked
+// =========================
+// CLOSE MOBILE MENU
+// =========================
 
-const navItems =
-    document.querySelectorAll(".nav-link");
-
+const navItems = document.querySelectorAll(".nav-link");
 
 navItems.forEach(function (link) {
-
     link.addEventListener("click", function () {
+        if (navLinks) {
+            navLinks.classList.remove("active");
+        }
 
-        navLinks.classList.remove("active");
-        menuButton.setAttribute("aria-expanded", "false");
-
+        if (menuButton) {
+            menuButton.setAttribute("aria-expanded", "false");
+            menuButton.setAttribute(
+                "aria-label",
+                "Open navigation menu"
+            );
+        }
     });
-
 });
 
 
@@ -41,9 +53,7 @@ navItems.forEach(function (link) {
 // TYPING ANIMATION
 // =========================
 
-const typingText =
-    document.getElementById("typing-text");
-
+const typingText = document.getElementById("typing-text");
 
 const jobs = [
     "Software Developer",
@@ -52,75 +62,52 @@ const jobs = [
     "Application Developer"
 ];
 
-
 let jobIndex = 0;
-
 let characterIndex = 0;
-
 let deleting = false;
 
-
 function typeEffect() {
+    if (!typingText) {
+        return;
+    }
 
-    const currentJob =
-        jobs[jobIndex];
-
+    const currentJob = jobs[jobIndex];
 
     if (deleting) {
-
         characterIndex--;
-
     } else {
-
         characterIndex++;
-
     }
 
+    typingText.textContent = currentJob.substring(
+        0,
+        characterIndex
+    );
 
-    typingText.textContent =
-        currentJob.substring(
-            0,
-            characterIndex
-        );
+    let speed = deleting ? 45 : 85;
 
-
-    let speed = deleting ? 50 : 100;
-
-
-    if (!deleting &&
-        characterIndex === currentJob.length) {
-
-        speed = 1800;
-
+    if (
+        !deleting &&
+        characterIndex === currentJob.length
+    ) {
+        speed = 1700;
         deleting = true;
-
-    }
-
-
-    else if (
+    } else if (
         deleting &&
         characterIndex === 0
     ) {
-
         deleting = false;
-
         jobIndex++;
 
         if (jobIndex === jobs.length) {
-
             jobIndex = 0;
-
         }
 
-        speed = 400;
-
+        speed = 350;
     }
 
-
     setTimeout(typeEffect, speed);
-
 }
-
 
 typeEffect();
 
@@ -129,39 +116,22 @@ typeEffect();
 // SCROLL REVEAL
 // =========================
 
-const revealElements =
-    document.querySelectorAll(".reveal");
-
+const revealElements = document.querySelectorAll(".reveal");
 
 function revealOnScroll() {
+    const windowHeight = window.innerHeight;
 
     revealElements.forEach(function (element) {
-
         const elementTop =
             element.getBoundingClientRect().top;
 
-        const windowHeight =
-            window.innerHeight;
-
-
-        if (elementTop <
-            windowHeight - 100) {
-
+        if (elementTop < windowHeight - 80) {
             element.classList.add("visible");
-
         }
-
     });
-
 }
 
-
-window.addEventListener(
-    "scroll",
-    revealOnScroll
-);
-
-
+window.addEventListener("scroll", revealOnScroll);
 revealOnScroll();
 
 
@@ -169,118 +139,77 @@ revealOnScroll();
 // ACTIVE NAVIGATION
 // =========================
 
-const sections =
-    document.querySelectorAll("section");
-
+const sections = document.querySelectorAll("main section");
 
 function updateNavigation() {
-
     let currentSection = "";
 
-
     sections.forEach(function (section) {
-
-        const sectionTop =
-            section.offsetTop - 150;
-
+        const sectionTop = section.offsetTop - 180;
 
         if (window.scrollY >= sectionTop) {
-
-            currentSection =
-                section.getAttribute("id");
-
+            currentSection = section.getAttribute("id");
         }
-
     });
 
-
     navItems.forEach(function (link) {
-
         link.classList.remove("active");
-
 
         if (
             link.getAttribute("href") ===
             "#" + currentSection
         ) {
-
             link.classList.add("active");
-
         }
-
     });
-
 }
 
-
-window.addEventListener(
-    "scroll",
-    updateNavigation
-);
+window.addEventListener("scroll", updateNavigation);
+updateNavigation();
 
 
 // =========================
 // BACK TO TOP
 // =========================
 
-const backToTop =
-    document.getElementById("back-to-top");
+const backToTop = document.getElementById("back-to-top");
 
-
-window.addEventListener(
-    "scroll",
-    function () {
-
+if (backToTop) {
+    window.addEventListener("scroll", function () {
         if (window.scrollY > 500) {
-
             backToTop.classList.add("show");
-
         } else {
-
             backToTop.classList.remove("show");
-
         }
+    });
 
-    }
-);
-
-
-backToTop.addEventListener(
-    "click",
-    function () {
-
+    backToTop.addEventListener("click", function () {
         window.scrollTo({
-
             top: 0,
-
             behavior: "smooth"
-
         });
-
-    }
-);
+    });
+}
 
 
 // =========================
 // LIGHT / DARK MODE
 // =========================
 
-const themeButton =
-    document.getElementById("theme-button");
+const themeButton = document.getElementById("theme-button");
 
+if (themeButton) {
+    document.body.classList.remove("light-mode");
 
-themeButton.textContent = "Light mode";
-themeButton.setAttribute("aria-pressed", "false");
+    themeButton.textContent = "Light mode";
+    themeButton.setAttribute("aria-pressed", "false");
+    themeButton.setAttribute(
+        "aria-label",
+        "Switch to light mode"
+    );
 
-
-themeButton.addEventListener(
-    "click",
-    function () {
-
-        document.body.classList.toggle(
-            "light-mode"
-        );
-
+    themeButton.addEventListener("click", function () {
+        document.body.classList.toggle("light-mode");
 
         const isLightMode =
             document.body.classList.contains("light-mode");
@@ -293,17 +222,22 @@ themeButton.addEventListener(
             String(isLightMode)
         );
 
-    }
-);
+        themeButton.setAttribute(
+            "aria-label",
+            isLightMode
+                ? "Switch to dark mode"
+                : "Switch to light mode"
+        );
+    });
+}
 
 
 // =========================
 // AUTOMATIC YEAR
 // =========================
 
-const year =
-    document.getElementById("year");
+const year = document.getElementById("year");
 
-
-year.textContent =
-    new Date().getFullYear();
+if (year) {
+    year.textContent = new Date().getFullYear();
+}
