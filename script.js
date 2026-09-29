@@ -11,6 +11,10 @@ const navLinks = document.getElementById("nav-links");
 menuButton.addEventListener("click", function () {
 
     navLinks.classList.toggle("active");
+    menuButton.setAttribute(
+        "aria-expanded",
+        String(navLinks.classList.contains("active"))
+    );
 
 });
 
@@ -26,6 +30,7 @@ navItems.forEach(function (link) {
     link.addEventListener("click", function () {
 
         navLinks.classList.remove("active");
+        menuButton.setAttribute("aria-expanded", "false");
 
     });
 
@@ -42,9 +47,9 @@ const typingText =
 
 const jobs = [
     "Software Developer",
-    "Web Developer",
-    "JavaScript Developer",
-    "Problem Solver"
+    "Full-Stack Developer",
+    "Backend Developer",
+    "Application Developer"
 ];
 
 
@@ -264,8 +269,8 @@ const themeButton =
     document.getElementById("theme-button");
 
 
-document.body.classList.add("light-mode");
-themeButton.textContent = "🌙";
+themeButton.textContent = "Light mode";
+themeButton.setAttribute("aria-pressed", "false");
 
 
 themeButton.addEventListener(
@@ -277,19 +282,16 @@ themeButton.addEventListener(
         );
 
 
-        if (
-            document.body.classList.contains(
-                "light-mode"
-            )
-        ) {
+        const isLightMode =
+            document.body.classList.contains("light-mode");
 
-            themeButton.textContent = "🌙";
+        themeButton.textContent =
+            isLightMode ? "Dark mode" : "Light mode";
 
-        } else {
-
-            themeButton.textContent = "☀";
-
-        }
+        themeButton.setAttribute(
+            "aria-pressed",
+            String(isLightMode)
+        );
 
     }
 );
@@ -305,4 +307,3 @@ const year =
 
 year.textContent =
     new Date().getFullYear();
-

@@ -217,9 +217,21 @@ header {
 
     color: var(--text);
 
-    font-size: 25px;
-
+    width: 40px;
+    height: 40px;
+    padding: 10px 8px;
     cursor: pointer;
+}
+
+.menu-button span {
+
+    display: block;
+
+    height: 2px;
+
+    margin: 4px 0;
+
+    background: currentColor;
 
 }
 
@@ -234,12 +246,15 @@ header {
 
     color: var(--text);
 
-    width: 40px;
-    height: 40px;
+    min-height: 40px;
+    padding: 0 14px;
 
-    border-radius: 50%;
+    border-radius: 20px;
 
     cursor: pointer;
+    font: inherit;
+    font-size: 12px;
+    font-weight: bold;
 
 }
 
@@ -431,111 +446,79 @@ header {
 
 
 /* =========================
-   CODE CARD
+   PROFILE PHOTO
 ========================= */
 
 .hero-card {
 
-    animation:
-        floating 4s ease-in-out infinite;
+    position: relative;
 
-}
+    max-width: 430px;
 
+    margin-left: auto;
 
-@keyframes floating {
+    border: 1px solid var(--border);
 
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-15px);
-    }
-
-}
-
-
-.code-window {
-
-    background:
-        rgba(15, 20, 45, 0.9);
-
-    border:
-        1px solid var(--border);
-
-    border-radius: 15px;
+    border-radius: 24px;
 
     overflow: hidden;
 
-    box-shadow:
-        0 30px 80px
-        rgba(0, 0, 0, 0.35);
+    background: var(--background-light);
+
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
 
 }
 
 
-.window-top {
+.profile-photo {
+
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio: 4 / 5;
+
+    object-fit: cover;
+
+    object-position: center 25%;
+
+}
+
+
+.profile-caption {
 
     display: flex;
 
-    gap: 7px;
+    flex-direction: column;
 
-    padding: 15px;
+    gap: 4px;
 
-    border-bottom:
-        1px solid var(--border);
+    padding: 18px 22px;
+
+}
+
+.profile-caption strong {
+
+    font-size: 17px;
 
 }
 
 
-.window-top span {
+.profile-caption span {
 
-    width: 11px;
-    height: 11px;
+    color: var(--muted);
 
-    border-radius: 50%;
-
-    background: #555;
+    font-size: 13px;
 
 }
 
 
-.code-window pre {
+.social-links a + a {
 
-    padding: 30px;
+    border-left: 1px solid var(--border);
 
-    overflow-x: auto;
-
+    padding-left: 12px;
 }
-
-
-.code-window code {
-
-    font-family:
-        Consolas,
-        monospace;
-
-    color: #e8ebff;
-
-    font-size: 14px;
-
-}
-
-
-.code-purple {
-
-    color: #c084fc;
-
-}
-
-
-.code-green {
-
-    color: #4ade80;
-
-}
-
 
 /* =========================
    SCROLL
@@ -683,7 +666,24 @@ header {
 
 .detail-icon {
 
-    font-size: 25px;
+    display: grid;
+
+    width: 48px;
+    height: 48px;
+
+    flex: 0 0 48px;
+
+    place-items: center;
+
+    border-radius: 12px;
+
+    background: rgba(108, 99, 255, 0.12);
+
+    color: var(--primary);
+
+    font-size: 12px;
+
+    font-weight: bold;
 
 }
 
@@ -787,7 +787,21 @@ header {
 
 .project-icon {
 
-    font-size: 28px;
+    align-self: flex-start;
+
+    padding: 5px 10px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 20px;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 0.08em;
 
 }
 
@@ -920,15 +934,6 @@ header {
 
     transform:
         translateY(-6px);
-
-}
-
-
-.skill-icon {
-
-    font-size: 28px;
-
-    margin-bottom: 12px;
 
 }
 
